@@ -62,15 +62,17 @@ content:
     content:
       - title: EPFL — École Polytechnique Fédérale de Lausanne
         location: Lausanne, Switzerland
-        caption: 2021 – present
-        description: | # this will include new lines to allow paragraphs
-          - Master's Degree in Robotics (GPA 5.43/6)
-          - Bachelor's Degree in Microengineering (GPA 5.11/6)
+        caption: 2021 – Present
+        items:
+          - text: Master's Degree in Robotics
+            note: GPA 5.43/6
+          - text: Bachelor's Degree in Microengineering
+            note: GPA 5.11/6
       - title: Delft University of Technology
         location: Delft, Netherlands
         caption: 2023 – 2024
-        description: | # this will include new lines to allow paragraphs
-          - Academic exchange year — Electrical Engineering
+        items:
+          - text: Academic exchange year, Electrical Engineering
 
   - title: Projects
     layout: list
@@ -147,80 +149,101 @@ content:
   - title: Courses
     layout: courses
     content:
-      - title: Control
+      - title: Multivariable Control
+        code: ME-422
+        link: https://edu.epfl.ch/coursebook/en/multivariable-control-ME-422
         details: | # this will include new lines to allow paragraphs
-          **Multivariable Control**
           - State-Space Representation
           - Pole Placement
           - Luenberger State Estimation (full, reduced)
           - LQR (Finite/Infinite Horizon)
           - (Extended) Kalman Filtering
-
-          **Advanced Control Systems**
+      - title: Advanced Control Systems
+        code: ME-524
+        link: https://edu.epfl.ch/coursebook/en/advanced-control-systems-ME-524
+        details: | # this will include new lines to allow paragraphs
           - Frequency Domain Representation
           - (Robust) Pole Placement
           - RST Control
           - Data-Driven Controller Design
           - H2, H∞ Optimal Control (Convex Optimization theory)
           - Adaptive Control
-
-          **Model Predictive Control**
+      - title: Model Predictive Control
+        code: ME-425
+        link: https://edu.epfl.ch/coursebook/en/model-predictive-control-ME-425
+        details: | # this will include new lines to allow paragraphs
           - Stability theory
           - Convex hull and polytope constraining
           - Robust (tube) MPC
           - Nonlinear MPC (NMPC)
           - Explicit MPC (eMPC)
           - Group Project: Autonomous Car
-
-          **System Identification**
+      - title: System Identification
+        code: ME-421
+        link: https://edu.epfl.ch/coursebook/en/system-identification-ME-421
+        details: | # this will include new lines to allow paragraphs
           - Signal Processing & Input selection
           - Parametric/Non-parametric Models
           - Time Domain Identification
           - Spectral/Fourier Analysis
           - FIR, ARX, ARMAX, OE models
-
-          **Networked Control Systems**
+      - title: Networked Control Systems
+        code: ME-427
+        link: https://edu.epfl.ch/coursebook/en/networked-control-systems-ME-427
+        details: | # this will include new lines to allow paragraphs
           - Stability theory (delay, packet dropout)
           - Graph Theory
           - Laplacian Control
       - title: Mobile Robotics
+        code: MICRO-452
+        link: https://edu.epfl.ch/coursebook/en/basics-of-mobile-robotics-MICRO-452
         details: | # this will include new lines to allow paragraphs
-          **Mobile Robotics**
           - (Non)Holonomic vehicles
           - Group Project (Thymio): Computer Vision, Applied Kalman Filtering, Path Planning in cluttered environments, Local Avoidance
-
-          **Aerial Robotics**
+      - title: Aerial Robotics
+        code: MICRO-502
+        link: https://edu.epfl.ch/coursebook/en/aerial-robotics-MICRO-502
+        details: | # this will include new lines to allow paragraphs
           - Computer Vision
           - Cascaded PID control
           - Flight dynamics
           - Project: Autonomous drone race with Computer Vision
-
-          **Robotic Manipulation**
+      - title: Robotic Manipulation
+        code: MICRO-450
+        link: https://edu.epfl.ch/coursebook/en/basics-of-robotics-for-manipulation-MICRO-450
+        details: | # this will include new lines to allow paragraphs
           - Robotic Kinematics
           - DOF handling through under/over-actuation
           - Quaternion Representation
-
-          **Distributed Intelligent Systems**
+      - title: Distributed Intelligent Systems
+        code: ENG-466
+        link: https://edu.epfl.ch/coursebook/en/distributed-intelligent-systems-ENG-466
+        details: | # this will include new lines to allow paragraphs
           - Ant Colony Optimization
           - Distributed/Centralized/Decentralized Schemes
           - Odor Source Localization
           - Group Project: Laplacian Control, Reynold's Flocking, Distributed Communication
       - title: Machine Learning
+        code: CS-433
+        link: https://edu.epfl.ch/coursebook/en/machine-learning-CS-433
         details: | # this will include new lines to allow paragraphs
-          **Machine Learning**
           - Supervised Learning (GMR, GMM, SVR, SVM, kNN, Regression Trees)
           - Unsupervised Learning (PCA, ICA, DBSCAN, k-means, Hierarchical Clustering)
           - ANN / DNN
-
-          **Reinforcement Learning**
+      - title: Reinforcement Learning
+        code: CS-456
+        link: https://edu.epfl.ch/coursebook/en/deep-reinforcement-learning-CS-456
+        details: | # this will include new lines to allow paragraphs
           - Markov Chains
           - Value Iteration, Policy Iteration
           - Policy Gradient
           - Deep RL
           - Imitation Learning
           - Group Project: Imitation Learning
-
-          **Applied Data Analysis**
+      - title: Applied Data Analysis
+        code: CS-401
+        link: https://edu.epfl.ch/coursebook/en/applied-data-analysis-CS-401
+        details: | # this will include new lines to allow paragraphs
           - Statistics
           - Data Scraping
           - Data Visualization
@@ -245,6 +268,8 @@ content:
           - Fault-Detection, Isolation and Recovery (FDIR) strategies
           - ADCS Architecture and Digital Twin Simulation
           - Hardware Integration and Testing
+        # image: images/spacecraft-team.jpg  -- TODO: uncomment and add your photo here (renders full-width below this entry)
+        # image_alt: EPFL Spacecraft Team with the CHESS CubeSat mockup
 
   - title: Publication
     layout: list
@@ -257,6 +282,8 @@ content:
           Presented and published at the 5th SSEA, hosted by the Technical University of Munich and organised with ESA.
         description: | # this will include new lines to allow paragraphs
           Developed a fully functional satellite simulator in MATLAB capable of simulating complex transitions between operation modes, and used it to study a set of controllers for failure-tolerant, power-optimal ADCS design.
+        # image: images/ssea-presentation.jpg  -- TODO: uncomment and add your photo here (renders full-width below this entry)
+        # image_alt: Presenting at the 5th SSEA in Munich
 
   - title: Languages & Interests
     layout: text
@@ -268,7 +295,7 @@ content:
       Arts — Music (guitar), painting, drawing · Sports — Triathlon, calisthenics · Space — Celestial body exploration and discovery
 
 # Footer
-footer_show_references: true
+footer_show_references: false
 # references_title: References on request (Override references text)
 
 # Build settings
