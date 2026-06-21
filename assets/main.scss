@@ -189,6 +189,29 @@ p.quote {
   white-space: nowrap;
 }
 
+.edu-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.edu-logo-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.8rem 1.6rem;
+}
+
+.edu-logo-card img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
 // ----------------------------------------------------------------------
 // Expandable boxes shared by Skills and Courses
 // ----------------------------------------------------------------------

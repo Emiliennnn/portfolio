@@ -63,6 +63,8 @@ content:
       - title: EPFL — École Polytechnique Fédérale de Lausanne
         location: Lausanne, Switzerland
         caption: 2021 – Present
+        logo: images/EPFL_logo.png
+        logo_alt: EPFL logo
         items:
           - text: Master's Degree in Robotics
             note: GPA 5.43/6
@@ -71,6 +73,8 @@ content:
       - title: Delft University of Technology
         location: Delft, Netherlands
         caption: 2023 – 2024
+        logo: images/tu_deflt_logo.png
+        logo_alt: TU Delft logo
         items:
           - text: Academic exchange year, Electrical Engineering
 

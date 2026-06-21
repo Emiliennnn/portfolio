@@ -15,3 +15,11 @@
   </ul>
 </div>
 {% endfor %}
+{%- assign edu_logos = include.content | where_exp: "item", "item.logo" -%}
+{%- if edu_logos.size > 0 -%}
+<div class="edu-logos">
+  {% for item in edu_logos %}
+  <span class="edu-logo-card"><img src="{{ item.logo | relative_url }}" alt="{{ item.logo_alt | default: item.title }}"></span>
+  {% endfor %}
+</div>
+{%- endif -%}
