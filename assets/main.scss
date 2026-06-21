@@ -3,3 +3,81 @@
 ---
 
 @import 'modern-resume-theme';
+
+// Sticky quick-access navigation
+.quicknav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.quicknav-container {
+  margin-top: 0;
+}
+
+.quicknav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  gap: 0.4rem 1.6rem;
+}
+
+.quicknav a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 150ms ease, color 150ms ease;
+}
+
+.quicknav a:hover,
+.quicknav a.active {
+  color: #477dca;
+  border-bottom-color: #477dca;
+}
+
+.dark .quicknav {
+  background: #222;
+  border-bottom-color: #444;
+}
+
+.dark .quicknav a {
+  color: #e6e6e6;
+}
+
+// Smooth scroll to sections, offset so the sticky bar doesn't cover the heading
+html {
+  scroll-behavior: smooth;
+}
+
+h3,
+h4 {
+  scroll-margin-top: 70px;
+}
+
+@media (max-width: 600px) {
+  .quicknav ul {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quicknav a {
+    white-space: nowrap;
+  }
+}
+
+@media print {
+  .quicknav {
+    display: none;
+  }
+}
