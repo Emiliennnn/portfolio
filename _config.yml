@@ -7,11 +7,11 @@ baseurl: /portfolio
 version: 2
 
 # Personal info
-name: Emilien
+name: Emilien Coudurier
 title: Robotics MSc Student at EPFL
 email: emilien.coudurier@epfl.ch
 # email_title: Email (Email title override)
-# phone: Your phone number (optional)
+# phone: (+33) 787-996-339  -- left out on purpose, see note below; uncomment to show it publicly
 # phone_title: Phone (Phone title override)
 # website: Your website (eg. https://google.com)(optional)
 # website_title: Web (Website title override)
@@ -44,7 +44,6 @@ additional_links:
 #   url: Link url (eg. https://google.com)
 
 # Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
 # gtm: "GTM-0000000"
 # gtag: "UA-00000000-0"
 # google_analytics: "UA-00000000-0"
@@ -53,87 +52,119 @@ additional_links:
 about_title: About Me
 about_profile_image: Directory of profile image (eg. images/profile.jpg)
 about_content: | # this will include new lines to allow paragraphs
-  I'm a Robotics MSc student at EPFL with a background in Microengineering. I'm interested in spacecraft systems, control, and mobile/aerial robotics, and I currently contribute to student-led robotics and space projects at EPFL.
+  I am a Master's student in Robotics at EPFL (École Polytechnique Fédérale de Lausanne). I have been focusing on Control Theory, including robust, adaptive and optimal controllers and state estimators, system identification, as well as networked and distributed systems.
 
-  <!-- TODO: add 2-3 more sentences in your own voice -- what draws you to robotics, what kind of problems you like working on, anything else that makes this section feel like you. -->
+  I have a deep interest in space and energy applications, and I aim to contribute to the development of innovative technologies that unite scientific research, sustainability and efficient use of resources. My goal is to support long-term engineering that benefits both the environment and society.
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Education
+    layout: list
     content:
-      - layout: left
-        border: weak
-        title: CHESS CubeSat — ADCS Design
-        link: https://www.epflspacecraftteam.ch
-        link_text: EPFL Spacecraft Team
-        additional_links:
-          - title: GitHub repo (add if public)
-            icon: fab fa-github
-            url: # TODO: add link if the repo is public
-        quote: >
-          Failure-tolerant, power-optimal ADCS design for a 3U CubeSat.
+      - layout: top-right
+        title: EPFL — École Polytechnique Fédérale de Lausanne
+        sub_title: Lausanne, Switzerland
+        caption: 2021 – present
         description: | # this will include new lines to allow paragraphs
-          As ADCS Lead Engineer for the EPFL Spacecraft Team, working on CHESS — a student-led 3U CubeSat constellation for high-performance time-of-flight mass spectrometry of Earth's atmosphere. Designed a redundant attitude determination and control system architecture, comparing attitude controllers to minimize energy consumption during operation. Presented this work at the 5th Symposium on Space Educational Activities (SSEA) in Munich.
-
-          <!-- TODO: add your own technical detail -- what controller types you compared, what tools/languages you used, what the outcome was. -->
-      - layout: left
-        border: weak
-        title: Gas Source Localization with Nano Aerial Vehicles
-        link: https://www.epfl.ch/labs/disal/
-        link_text: DISAL Lab, EPFL
-        quote: >
-          Locating gas leaks efficiently using physics-based gas distribution mapping.
+          - **Master's Degree in Robotics** (GPA 5.43/6)
+          - **Bachelor's Degree in Microengineering** (GPA 5.11/6)
+      - layout: top-right
+        title: Delft University of Technology
+        sub_title: Exchange Year — Electrical Engineering
+        caption: 2023 – 2024
         description: | # this will include new lines to allow paragraphs
-          Semester/master project at DISAL (Distributed Intelligent Systems and Algorithms Lab). The goal is to locate gas leaks as efficiently as possible using a Nano Aerial Vehicle, building on physics-based gas mapping approaches for mobile robotics.
+          Academic exchange year in Delft, Netherlands.
 
-          <!-- TODO: add your approach, current status/results, and any tools (e.g. ROS, Python, simulation framework) you used. -->
+  - title: Skills
+    layout: text
+    content: | # this will include new lines to allow paragraphs
+      **Control**
+      Robust / Optimal / Adaptive / Non-linear Control, Networked and Distributed Systems, System Identification
+
+      **State Estimation**
+      (Extended/Unscented) Kalman Filtering, H2-based / H∞-based / Regret-based estimation, Multiple Model State Estimation
+
+      **Space Systems**
+      Orbit Dynamics, Fault Detection Isolation and Recovery (FDIR), Attitude Determination and Control (ADCS)
+
+      **Machine Learning**
+      Imitation/Reinforcement Learning, Supervised/Unsupervised Learning, Applied Data Analysis, Computer Vision
+
+      **Programming**
+      MATLAB (Simulink), Python, C/C#/C++, Assembly, ROS2
 
   - title: Experience
     layout: list
     content:
       - layout: right
         title: EPFL Spacecraft Team
-        sub_title: ADCS Lead Engineer
-        caption: # TODO: add date range, eg. "September 2024 - present"
+        sub_title: Lead ADCS Engineer
+        caption: 02/2025 – Present
         link: https://www.epflspacecraftteam.ch
+        link_text: EPFL Spacecraft Team
         quote: >
-          Student-led CubeSat mission, run as an EPFL association.
+          Part of a 70-member student team building CHESS, a 3U CubeSat to characterize the chemical composition of Earth's exosphere, affiliated with ESA's Fly Your Satellite Design Booster program.
         description: | # this will include new lines to allow paragraphs
-          Leading the Attitude Determination and Control System (ADCS) subsystem for CHESS, a 3U CubeSat constellation mission. Responsible for control architecture design, redundancy planning, and energy-optimal attitude control.
+          Working closely with fellow team members and ESA AOCS experts on a CubeSat carrying a mass spectrometer developed at the University of Bern, expected to launch mid-2027. Amongst others, in charge of:
+          - State-Estimation and Control Schemes
+          - Fault-Detection, Isolation and Recovery (FDIR) strategies
+          - ADCS Architecture and Digital Twin Simulation
+          - Hardware Integration and Testing
 
-          <!-- TODO: add team size, specific responsibilities, milestones reached. -->
-      # TODO: add any internships or other roles from your LinkedIn here, same format as above.
-
-  - title: Education
+  - title: Projects
     layout: list
     content:
-      - layout: top-right
-        title: EPFL (École Polytechnique Fédérale de Lausanne)
-        sub_title: MSc in Robotics
-        caption: # TODO: add date range, eg. "2025 - present"
+      - layout: left
+        border: weak
+        title: Optimal State Estimation for Large and Distributed Systems
+        sub_title: EPFL DECODE Laboratory
+        caption: 02/2025 – 08/2025
         quote: >
-          # TODO: optional short description of the program focus
+          State estimation for large, distributed systems using a power grid benchmark.
         description: | # this will include new lines to allow paragraphs
-          # TODO: relevant coursework, specialization, or thesis topic if applicable
-      - layout: top-right
-        title: EPFL (École Polytechnique Fédérale de Lausanne)
-        sub_title: BSc in Microengineering
-        caption: # TODO: add date range
+          - Simulation in Python (NumPy, CVXPY)
+          - Design of optimal state estimators (H∞, H2/Kalman, regret-based)
+          - Statement of two new propositions/lemmas based on duality
+      - layout: left
+        border: weak
+        title: ADCS Sizing and Failure-Tolerance Assessment
+        sub_title: EPFL Spacecraft Team, ESA
+        caption: 09/2025 – 01/2026
         quote: >
-          # TODO: optional short description
+          Prototyping a fault-tolerant Attitude Determination and Control System for a 3U nanosatellite, part of ESA's "Fly Your Satellite!" program.
         description: | # this will include new lines to allow paragraphs
-          # TODO: notable projects, focus areas, or honors during the Bachelor's
+          - Digital twin coded in MATLAB
+          - Failure assessment and risk analysis for redundancy needs
+      - layout: left
+        border: weak
+        title: Reinforcement Learning for Gas Source Localization
+        sub_title: EPFL DISAL Laboratory
+        caption: 02/2026 – Present
+        quote: >
+          Reinforcement learning-based path planning strategy for gas source localization.
+        description: | # this will include new lines to allow paragraphs
+          - Drone agent numerically trained in a realistic environment using ROS2
+          - Sensor modelling and signal processing
 
-  - title: Skills
+  - title: Publication
+    layout: list
+    content:
+      - layout: left
+        title: Failure-Tolerant and Power-Optimal ADCS Design for 3U CubeSats
+        sub_title: 5th Symposium on Space Educational Activities (SSEA)
+        caption: 04/2026
+        quote: >
+          Presented and published at the 5th SSEA, hosted by the Technical University of Munich and organised with ESA.
+        description: | # this will include new lines to allow paragraphs
+          Developed a fully functional satellite simulator in MATLAB capable of simulating complex transitions between operation modes, and used it to study a set of controllers for failure-tolerant, power-optimal ADCS design.
+
+  - title: Languages & Interests
     layout: text
     content: | # this will include new lines to allow paragraphs
-      <!-- TODO: fill in your real skill set. A few categories that probably apply given your projects, but confirm/edit: -->
+      **Languages**
+      French — Mother tongue · English — Fluent (C1+), academic exchange year at TU Delft · Spanish — Intermediate (A2/B1)
 
-      **Programming:** Python, C++, ...
-
-      **Robotics & Control:** ROS/ROS2, control systems, embedded systems, ...
-
-      **Other:** CAD, simulation tools, languages spoken, ...
+      **Interests**
+      Arts — Music (guitar), painting, drawing · Sports — Triathlon, calisthenics · Space — Celestial body exploration and discovery
 
 # Footer
 footer_show_references: true
