@@ -37,7 +37,7 @@ github_username:  Emiliennnn
 # Additional icon links
 additional_links:
 - title: Linkedin
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
+  icon: fab fa-linkedin
   url: https://www.linkedin.com/in/emilien-coudurier-1b6173320/
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
@@ -53,64 +53,87 @@ additional_links:
 about_title: About Me
 about_profile_image: Directory of profile image (eg. images/profile.jpg)
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+  I'm a Robotics MSc student at EPFL with a background in Microengineering. I'm interested in spacecraft systems, control, and mobile/aerial robotics, and I currently contribute to student-led robotics and space projects at EPFL.
 
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+  <!-- TODO: add 2-3 more sentences in your own voice -- what draws you to robotics, what kind of problems you like working on, anything else that makes this section feel like you. -->
 
 content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
+        border: weak
+        title: CHESS CubeSat — ADCS Design
+        link: https://www.epflspacecraftteam.ch
+        link_text: EPFL Spacecraft Team
         additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
+          - title: GitHub repo (add if public)
             icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+            url: # TODO: add link if the repo is public
         quote: >
-          Short overview of the project (optional)
+          Failure-tolerant, power-optimal ADCS design for a 3U CubeSat.
         description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          As ADCS Lead Engineer for the EPFL Spacecraft Team, working on CHESS — a student-led 3U CubeSat constellation for high-performance time-of-flight mass spectrometry of Earth's atmosphere. Designed a redundant attitude determination and control system architecture, comparing attitude controllers to minimize energy consumption during operation. Presented this work at the 5th Symposium on Space Educational Activities (SSEA) in Munich.
+
+          <!-- TODO: add your own technical detail -- what controller types you compared, what tools/languages you used, what the outcome was. -->
+      - layout: left
+        border: weak
+        title: Gas Source Localization with Nano Aerial Vehicles
+        link: https://www.epfl.ch/labs/disal/
+        link_text: DISAL Lab, EPFL
+        quote: >
+          Locating gas leaks efficiently using physics-based gas distribution mapping.
+        description: | # this will include new lines to allow paragraphs
+          Semester/master project at DISAL (Distributed Intelligent Systems and Algorithms Lab). The goal is to locate gas leaks as efficiently as possible using a Nano Aerial Vehicle, building on physics-based gas mapping approaches for mobile robotics.
+
+          <!-- TODO: add your approach, current status/results, and any tools (e.g. ROS, Python, simulation framework) you used. -->
+
   - title: Experience
     layout: list
     content:
       - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
+        title: EPFL Spacecraft Team
+        sub_title: ADCS Lead Engineer
+        caption: # TODO: add date range, eg. "September 2024 - present"
+        link: https://www.epflspacecraftteam.ch
         quote: >
-          Short description of the company (optional)
+          Student-led CubeSat mission, run as an EPFL association.
         description: | # this will include new lines to allow paragraphs
-          Description of role
+          Leading the Attitude Determination and Control System (ADCS) subsystem for CHESS, a 3U CubeSat constellation mission. Responsible for control architecture design, redundancy planning, and energy-optimal attitude control.
+
+          <!-- TODO: add team size, specific responsibilities, milestones reached. -->
+      # TODO: add any internships or other roles from your LinkedIn here, same format as above.
+
   - title: Education
     layout: list
     content:
       - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
+        title: EPFL (École Polytechnique Fédérale de Lausanne)
+        sub_title: MSc in Robotics
+        caption: # TODO: add date range, eg. "2025 - present"
         quote: >
-          Short institution or course description (optional)
+          # TODO: optional short description of the program focus
         description: | # this will include new lines to allow paragraphs
-          Description of qualification
-  - title: A Little More About Me
+          # TODO: relevant coursework, specialization, or thesis topic if applicable
+      - layout: top-right
+        title: EPFL (École Polytechnique Fédérale de Lausanne)
+        sub_title: BSc in Microengineering
+        caption: # TODO: add date range
+        quote: >
+          # TODO: optional short description
+        description: | # this will include new lines to allow paragraphs
+          # TODO: notable projects, focus areas, or honors during the Bachelor's
+
+  - title: Skills
     layout: text
     content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+      <!-- TODO: fill in your real skill set. A few categories that probably apply given your projects, but confirm/edit: -->
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+      **Programming:** Python, C++, ...
+
+      **Robotics & Control:** ROS/ROS2, control systems, embedded systems, ...
+
+      **Other:** CAD, simulation tools, languages spoken, ...
 
 # Footer
 footer_show_references: true
