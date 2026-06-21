@@ -26,4 +26,9 @@
       {{ item.description | strip | markdownify }}
     </div>
   </div>
+  {%- if item.image -%}
+  <div class="item-image">
+    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}">
+  </div>
+  {%- endif -%}
 {% endfor %}

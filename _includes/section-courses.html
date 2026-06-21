@@ -1,7 +1,12 @@
 <div class="courses-list">
   {% for item in include.content %}
   <details class="course-item">
-    <summary>{{ item.title }}</summary>
+    <summary>
+      {{ item.title }}
+      {%- if item.link -%}
+      <a class="course-code" href="{{ item.link }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ item.code }}</a>
+      {%- endif -%}
+    </summary>
     <div class="course-details">
       {{ item.details | strip | markdownify }}
     </div>

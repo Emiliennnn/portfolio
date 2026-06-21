@@ -1,14 +1,17 @@
 {% for item in include.content %}
 <div class="edu-item">
   <h4 class="edu-title">{{ item.title }}</h4>
-  <div class="edu-row">
-    <div class="edu-description">
-      {{ item.description | strip | markdownify }}
-    </div>
-    <div class="edu-meta">
-      {%- if item.caption -%}<p>{{ item.caption }}</p>{%- endif -%}
-      {%- if item.location -%}<p>{{ item.location }}</p>{%- endif -%}
-    </div>
+  <div class="edu-meta">
+    {%- if item.location -%}<p>{{ item.location }}</p>{%- endif -%}
+    {%- if item.caption -%}<p>{{ item.caption }}</p>{%- endif -%}
   </div>
+  <ul class="edu-list">
+    {% for point in item.items %}
+    <li>
+      <span class="edu-list-text">{{ point.text }}</span>
+      {%- if point.note -%}<span class="edu-list-note">{{ point.note }}</span>{%- endif -%}
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 {% endfor %}
