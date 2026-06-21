@@ -1,0 +1,10 @@
+<div class="courses-list">
+  {% for item in include.content %}
+  <details class="course-item">
+    <summary>{{ item.title }}</summary>
+    <div class="course-details">
+      {{ item.details | strip | markdownify }}
+    </div>
+  </details>
+  {% endfor %}
+</div>
