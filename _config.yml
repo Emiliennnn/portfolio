@@ -58,19 +58,19 @@ about_content: | # this will include new lines to allow paragraphs
 
 content:
   - title: Education
-    layout: list
+    layout: education
     content:
-      - layout: top-left
-        title: EPFL — École Polytechnique Fédérale de Lausanne
-        sub_title: Lausanne, Switzerland
+      - title: EPFL — École Polytechnique Fédérale de Lausanne
+        location: Lausanne, Switzerland
         caption: 2021 – present
         description: | # this will include new lines to allow paragraphs
-          - **Master's Degree in Robotics** (GPA 5.43/6)
-          - **Bachelor's Degree in Microengineering** (GPA 5.11/6)
-      - layout: top-left
-        title: Delft University of Technology
-        sub_title: Exchange Year — Electrical Engineering
+          - Master's Degree in Robotics (GPA 5.43/6)
+          - Bachelor's Degree in Microengineering (GPA 5.11/6)
+      - title: Delft University of Technology
+        location: Delft, Netherlands
         caption: 2023 – 2024
+        description: | # this will include new lines to allow paragraphs
+          - Academic exchange year — Electrical Engineering
 
   - title: Projects
     layout: list
@@ -86,6 +86,8 @@ content:
           - Simulation in Python (NumPy, CVXPY)
           - Design of optimal state estimators (H∞, H2/Kalman, regret-based)
           - Statement of two new propositions/lemmas based on duality
+
+          <!-- TODO: drop your refined description in here, this column is now ~half the page width -->
       - layout: left
         border: weak
         title: ADCS Sizing and Failure-Tolerance Assessment
@@ -96,6 +98,8 @@ content:
         description: | # this will include new lines to allow paragraphs
           - Digital twin coded in MATLAB
           - Failure assessment and risk analysis for redundancy needs
+
+          <!-- TODO: drop your refined description in here -->
       - layout: left
         border: weak
         title: Reinforcement Learning for Gas Source Localization
@@ -107,23 +111,122 @@ content:
           - Drone agent numerically trained in a realistic environment using ROS2
           - Sensor modelling and signal processing
 
+          <!-- TODO: drop your refined description in here -->
+
   - title: Skills
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      **Control**
-      Robust / Optimal / Adaptive / Non-linear Control, Networked and Distributed Systems, System Identification
+    layout: skills
+    content:
+      - title: Control
+        details: | # this will include new lines to allow paragraphs
+          - Robust / Optimal / Adaptive / Non-linear Control
+          - Networked and Distributed Systems
+          - System Identification
+      - title: State Estimation
+        details: | # this will include new lines to allow paragraphs
+          - (Extended/Unscented) Kalman Filtering
+          - H2-based / H∞-based / Regret-based estimation
+          - Multiple Model State Estimation
+      - title: Space Systems
+        details: | # this will include new lines to allow paragraphs
+          - Orbit Dynamics
+          - Fault Detection, Isolation and Recovery (FDIR)
+          - Attitude Determination and Control (ADCS)
+      - title: Machine Learning
+        details: | # this will include new lines to allow paragraphs
+          - Imitation/Reinforcement Learning
+          - Supervised/Unsupervised Learning
+          - Applied Data Analysis
+          - Computer Vision
+      - title: Programming
+        details: | # this will include new lines to allow paragraphs
+          - MATLAB (Simulink)
+          - Python
+          - C/C#/C++
+          - Assembly, ROS2
 
-      **State Estimation**
-      (Extended/Unscented) Kalman Filtering, H2-based / H∞-based / Regret-based estimation, Multiple Model State Estimation
+  - title: Courses
+    layout: courses
+    content:
+      - title: Control
+        details: | # this will include new lines to allow paragraphs
+          **Multivariable Control**
+          - State-Space Representation
+          - Pole Placement
+          - Luenberger State Estimation (full, reduced)
+          - LQR (Finite/Infinite Horizon)
+          - (Extended) Kalman Filtering
 
-      **Space Systems**
-      Orbit Dynamics, Fault Detection Isolation and Recovery (FDIR), Attitude Determination and Control (ADCS)
+          **Advanced Control Systems**
+          - Frequency Domain Representation
+          - (Robust) Pole Placement
+          - RST Control
+          - Data-Driven Controller Design
+          - H2, H∞ Optimal Control (Convex Optimization theory)
+          - Adaptive Control
 
-      **Machine Learning**
-      Imitation/Reinforcement Learning, Supervised/Unsupervised Learning, Applied Data Analysis, Computer Vision
+          **Model Predictive Control**
+          - Stability theory
+          - Convex hull and polytope constraining
+          - Robust (tube) MPC
+          - Nonlinear MPC (NMPC)
+          - Explicit MPC (eMPC)
+          - Group Project: Autonomous Car
 
-      **Programming**
-      MATLAB (Simulink), Python, C/C#/C++, Assembly, ROS2
+          **System Identification**
+          - Signal Processing & Input selection
+          - Parametric/Non-parametric Models
+          - Time Domain Identification
+          - Spectral/Fourier Analysis
+          - FIR, ARX, ARMAX, OE models
+
+          **Networked Control Systems**
+          - Stability theory (delay, packet dropout)
+          - Graph Theory
+          - Laplacian Control
+      - title: Mobile Robotics
+        details: | # this will include new lines to allow paragraphs
+          **Mobile Robotics**
+          - (Non)Holonomic vehicles
+          - Group Project (Thymio): Computer Vision, Applied Kalman Filtering, Path Planning in cluttered environments, Local Avoidance
+
+          **Aerial Robotics**
+          - Computer Vision
+          - Cascaded PID control
+          - Flight dynamics
+          - Project: Autonomous drone race with Computer Vision
+
+          **Robotic Manipulation**
+          - Robotic Kinematics
+          - DOF handling through under/over-actuation
+          - Quaternion Representation
+
+          **Distributed Intelligent Systems**
+          - Ant Colony Optimization
+          - Distributed/Centralized/Decentralized Schemes
+          - Odor Source Localization
+          - Group Project: Laplacian Control, Reynold's Flocking, Distributed Communication
+      - title: Machine Learning
+        details: | # this will include new lines to allow paragraphs
+          **Machine Learning**
+          - Supervised Learning (GMR, GMM, SVR, SVM, kNN, Regression Trees)
+          - Unsupervised Learning (PCA, ICA, DBSCAN, k-means, Hierarchical Clustering)
+          - ANN / DNN
+
+          **Reinforcement Learning**
+          - Markov Chains
+          - Value Iteration, Policy Iteration
+          - Policy Gradient
+          - Deep RL
+          - Imitation Learning
+          - Group Project: Imitation Learning
+
+          **Applied Data Analysis**
+          - Statistics
+          - Data Scraping
+          - Data Visualization
+          - Applied ML
+          - Causal Inference
+          - Group Project: Epidemiology of Toxicity in the Reddit Hyperlink Network
 
   - title: Experience
     layout: list
