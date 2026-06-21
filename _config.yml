@@ -73,39 +73,39 @@ content:
         caption: 2023 – 2024
 
   - title: Projects
-      layout: list
-      content:
-        - layout: left
-          border: weak
-          title: Optimal State Estimation for Large and Distributed Systems
-          sub_title: EPFL DECODE Laboratory
-          caption: 02/2025 – 08/2025
-          quote: >
-            State estimation for large, distributed systems using a power grid benchmark.
-          description: | # this will include new lines to allow paragraphs
-            - Simulation in Python (NumPy, CVXPY)
-            - Design of optimal state estimators (H∞, H2/Kalman, regret-based)
-            - Statement of two new propositions/lemmas based on duality
-        - layout: left
-          border: weak
-          title: ADCS Sizing and Failure-Tolerance Assessment
-          sub_title: EPFL Spacecraft Team, ESA
-          caption: 09/2025 – 01/2026
-          quote: >
-            Prototyping a fault-tolerant Attitude Determination and Control System for a 3U nanosatellite, part of ESA's "Fly Your Satellite!" program.
-          description: | # this will include new lines to allow paragraphs
-            - Digital twin coded in MATLAB
-            - Failure assessment and risk analysis for redundancy needs
-        - layout: left
-          border: weak
-          title: Reinforcement Learning for Gas Source Localization
-          sub_title: EPFL DISAL Laboratory
-          caption: 02/2026 – Present
-          quote: >
-            Reinforcement learning-based path planning strategy for gas source localization.
-          description: | # this will include new lines to allow paragraphs
-            - Drone agent numerically trained in a realistic environment using ROS2
-            - Sensor modelling and signal processing
+    layout: list
+    content:
+      - layout: left
+        border: weak
+        title: Optimal State Estimation for Large and Distributed Systems
+        sub_title: EPFL DECODE Laboratory
+        caption: 02/2025 – 08/2025
+        quote: >
+          State estimation for large, distributed systems using a power grid benchmark.
+        description: | # this will include new lines to allow paragraphs
+          - Simulation in Python (NumPy, CVXPY)
+          - Design of optimal state estimators (H∞, H2/Kalman, regret-based)
+          - Statement of two new propositions/lemmas based on duality
+      - layout: left
+        border: weak
+        title: ADCS Sizing and Failure-Tolerance Assessment
+        sub_title: EPFL Spacecraft Team, ESA
+        caption: 09/2025 – 01/2026
+        quote: >
+          Prototyping a fault-tolerant Attitude Determination and Control System for a 3U nanosatellite, part of ESA's "Fly Your Satellite!" program.
+        description: | # this will include new lines to allow paragraphs
+          - Digital twin coded in MATLAB
+          - Failure assessment and risk analysis for redundancy needs
+      - layout: left
+        border: weak
+        title: Reinforcement Learning for Gas Source Localization
+        sub_title: EPFL DISAL Laboratory
+        caption: 02/2026 – Present
+        quote: >
+          Reinforcement learning-based path planning strategy for gas source localization.
+        description: | # this will include new lines to allow paragraphs
+          - Drone agent numerically trained in a realistic environment using ROS2
+          - Sensor modelling and signal processing
 
   - title: Skills
     layout: text
