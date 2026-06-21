@@ -81,3 +81,188 @@ h4 {
     display: none;
   }
 }
+
+// ----------------------------------------------------------------------
+// Section spacing: each section gets enough height that jumping to it
+// from the nav bar doesn't reveal the previous/next section too.
+// ----------------------------------------------------------------------
+.content-section {
+  min-height: calc(100vh - 80px);
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  box-sizing: border-box;
+}
+
+// ----------------------------------------------------------------------
+// Section titles (h3): bold, slightly larger, solid divider instead of
+// the dashed one.
+// ----------------------------------------------------------------------
+h3 {
+  font-weight: 700;
+  font-size: 3.2rem;
+  border-bottom: solid 1px #ccc;
+}
+
+.dark h3 {
+  border-bottom-color: #444;
+}
+
+// Sub-headings used inside section bodies (eg. "Languages" / "Interests",
+// or a course's topic names) -- written in markdown as a bold-only line,
+// rendered larger so they read as in-body section names.
+.page-content p > strong:only-child {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1.2rem 0 0.5rem;
+}
+
+// ----------------------------------------------------------------------
+// Muted color for secondary info (dates, locations, subtitles, quotes):
+// dimmer than the main text, but still readable against the background.
+// ----------------------------------------------------------------------
+.details p,
+.edu-meta,
+p.quote {
+  color: #6b6b6b;
+}
+
+.dark .details p,
+.dark .edu-meta,
+.dark p.quote {
+  color: #a8a8a8;
+}
+
+.border-weak {
+  border-bottom: solid 1px #ddd;
+}
+
+.dark .border-weak {
+  border-bottom-color: #444;
+}
+
+// ----------------------------------------------------------------------
+// Education section: full-width institution name, bullet description on
+// the left, dates/location on the right.
+// ----------------------------------------------------------------------
+.edu-item {
+  margin-bottom: 2.5rem;
+}
+
+.edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.edu-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.edu-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem 2rem;
+}
+
+.edu-description {
+  flex: 1 1 60%;
+}
+
+.edu-description ul {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.edu-meta {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.edu-meta p {
+  margin: 0 0 0.2rem;
+}
+
+@media (max-width: 600px) {
+  .edu-row {
+    flex-direction: column;
+  }
+
+  .edu-meta {
+    text-align: left;
+  }
+}
+
+// ----------------------------------------------------------------------
+// Expandable boxes shared by Skills and Courses
+// ----------------------------------------------------------------------
+.skill-category,
+.course-item {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.9rem 1.2rem;
+}
+
+.dark .skill-category,
+.dark .course-item {
+  border-color: #444;
+}
+
+.skill-category summary,
+.course-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.8rem;
+  list-style: none;
+}
+
+.skill-category summary::-webkit-details-marker,
+.course-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.skill-category summary::before,
+.course-item summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.6rem;
+  transition: transform 150ms ease;
+}
+
+.skill-category[open] summary::before,
+.course-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.skill-details,
+.course-details {
+  margin-top: 0.8rem;
+  padding-left: 0.2rem;
+}
+
+.skill-details ul,
+.course-details ul {
+  margin: 0 0 0.5rem;
+  padding-left: 1.4rem;
+}
+
+// Skills: two-column flow, each box stays intact within a column
+.skills-columns {
+  columns: 2;
+  column-gap: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  .skills-columns {
+    columns: 1;
+  }
+}
+
+// Courses: single column, a bit roomier
+.courses-list .course-item {
+  padding: 1.2rem 1.6rem;
+}
