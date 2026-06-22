@@ -366,6 +366,22 @@ p.quote {
 }
 
 // ----------------------------------------------------------------------
+// Publication section width: narrows and centers each entry. Raise/lower
+// the percentage to make it wider/narrower.
+// ----------------------------------------------------------------------
+#publication ~ .row {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  #publication ~ .row {
+    max-width: 100%;
+  }
+}
+
+// ----------------------------------------------------------------------
 // Large images, eg. after an Experience or Publication entry
 // ----------------------------------------------------------------------
 .item-image {
