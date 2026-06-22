@@ -84,41 +84,61 @@ content:
     content:
       - layout: left
         border: weak
+        title: Reinforcement Learning for Gas Source Localization
+        sub_title: EPFL DISAL Laboratory
+        sub_title_link: https://www.epfl.ch/labs/disal/
+        caption: 02/2026 – Present
+        expandable: true
+        description: | # this will include new lines to allow paragraphs
+          In this project, I extended a Reinforcement Learning pipeline to allow robust learning of an optimal path planning strategy. The Soft Actor-Critic agent learned in a randomized cluttered environment with non-laminar flows, with randomized sensor models, profiles and filament parameters. The gas and wind sensors were designed with output-error models, to realistically mimic physical dynamics. Through an ablation study, I identified key pipeline processes which statisitcally improve robustness overall.
+
+          Contribution:
+          - Pipeline improvement in Python (sensor modelling, noise profiles and Domain Randomization)
+          - Statistical analysis of performance gains
+
+          Learned Skills:
+          - Python<>ROS handling with docker container and Linux cluster interaction
+          - Rigorous coding on top of existing code base (gitlab)
+          - Research methods (literature review, limitation and critical assessment)
+
+      - layout: left
+        border: weak
+        title: ADCS Sizing and Failure-Tolerance Assessment
+        sub_title: EPFL Spacecraft Team
+        sub_title_link: https://www.epflspacecraftteam.ch
+        caption: 09/2025 – 01/2026
+        expandable: true
+        description: | # this will include new lines to allow paragraphs
+          I prototyped a fault-tolerant Attitude Determination and Control System for a 3U nanosatellite, for the EPFL Spacecraft Team. It included actuator sizing (reaction wheels, magnetic torquers), sensor layout (sun sensors, IMUs, magnetometers) and risk assessment for the next platform expected to be launched in Q3 2027.
+
+          Contribution:
+          - Digital twin coded in MATLAB
+          - Failure assessment and risk analysis for redundancy needs
+
+          Learned Skills:
+          - Space control systems (ADCS design)
+          - FDIR Methods
+          - Industry standards and state-of-the-art for CubeSat
+
+      - layout: left
+        border: weak
         title: Optimal State Estimation for Large and Distributed Systems
         sub_title: EPFL DECODE Laboratory
+        sub_title_link: https://www.epfl.ch/labs/decode/
         caption: 02/2025 – 08/2025
-        quote: >
-          State estimation for large, distributed systems using a power grid benchmark.
+        expandable: true
         description: | # this will include new lines to allow paragraphs
+          I implemented a regret-based state estimator and compared it to classical H2 and H∞ estimators, using a power grid benchmark. I worked on the statement of two new lemmas, specifically regarding sparsity invariance of quadratic invariant systems under the System Level Synthesis convex formulation.
+
+          Contribution:
           - Simulation in Python (NumPy, CVXPY)
           - Design of optimal state estimators (H∞, H2/Kalman, regret-based)
           - Statement of two new propositions/lemmas based on duality
 
-          <!-- TODO: drop your refined description in here, this column is now ~half the page width -->
-      - layout: left
-        border: weak
-        title: ADCS Sizing and Failure-Tolerance Assessment
-        sub_title: EPFL Spacecraft Team, ESA
-        caption: 09/2025 – 01/2026
-        quote: >
-          Prototyping a fault-tolerant Attitude Determination and Control System for a 3U nanosatellite, part of ESA's "Fly Your Satellite!" program.
-        description: | # this will include new lines to allow paragraphs
-          - Digital twin coded in MATLAB
-          - Failure assessment and risk analysis for redundancy needs
-
-          <!-- TODO: drop your refined description in here -->
-      - layout: left
-        border: weak
-        title: Reinforcement Learning for Gas Source Localization
-        sub_title: EPFL DISAL Laboratory
-        caption: 02/2026 – Present
-        quote: >
-          Reinforcement learning-based path planning strategy for gas source localization.
-        description: | # this will include new lines to allow paragraphs
-          - Drone agent numerically trained in a realistic environment using ROS2
-          - Sensor modelling and signal processing
-
-          <!-- TODO: drop your refined description in here -->
+          Learned Skills:
+          - Complex python simulation using OOP
+          - Mathematical proof construction (theory abstraction)
+          - Research methods (literature review, limitation and critical assessment)
 
   - title: Skills
     layout: skills
@@ -261,10 +281,9 @@ content:
     content:
       - layout: right
         title: EPFL Spacecraft Team
+        title_link: https://www.epflspacecraftteam.ch
         sub_title: Lead ADCS Engineer
         caption: 02/2025 – Present
-        link: https://www.epflspacecraftteam.ch
-        link_text: EPFL Spacecraft Team
         quote: >
           Part of a 70-member student team building CHESS, a 3U CubeSat to characterize the chemical composition of Earth's exosphere, affiliated with ESA's Fly Your Satellite Design Booster program.
         description: | # this will include new lines to allow paragraphs

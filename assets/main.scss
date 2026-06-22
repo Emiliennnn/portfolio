@@ -14,7 +14,7 @@
 // ----------------------------------------------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 
-$font-family: 'Roboto', sans-serif;
+$font-family: 'IBM Plex Sans', sans-serif;
 
 body,
 h1, h2, h3, h4, h5, h6 {
@@ -26,11 +26,24 @@ h1, h2, h3, h4, h5, h6 {
 // to make them bigger/smaller.
 // ----------------------------------------------------------------------
 .header-left h1 {
-  font-size: 4rem; // your name
+  font-size: 6rem; // your name
 }
 
 .header-left h2 {
-  font-size: 2rem; // your title
+  font-size: 3rem; // your title
+}
+
+// Align the social icons/email (header-right) with your name: the theme
+// gives header-left a top margin that header-right didn't have, which is
+// why the icons/email sat a bit higher than the name.
+.header-right {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-right {
+    margin-top: 0;
+  }
 }
 
 // Sticky quick-access navigation
@@ -54,12 +67,12 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 0.75rem 1rem; // <- vertical/horizontal padding controls the bar's height
+  padding: 1.7rem 1.75rem; // <- vertical/horizontal padding controls the bar's height
   gap: 0.4rem 1.6rem;
 }
 
 .quicknav a {
-  font-size: 1.4rem; // <- nav link text size
+  font-size: 1.6rem; // <- nav link text size
   font-weight: 500;
   text-decoration: none;
   color: #333;
@@ -239,12 +252,12 @@ p.quote {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2.5rem; // <- space between logos
+  gap: 10rem; // <- space between logos
   margin-top: 3rem;
 }
 
 .edu-logo {
-  height: 40px; // <- logo size (width follows automatically)
+  height: 60px; // <- logo size (width follows automatically)
   width: auto;
   display: block;
 }
@@ -256,10 +269,12 @@ p.quote {
 }
 
 // ----------------------------------------------------------------------
-// Expandable boxes shared by Skills and Courses
+// Expandable boxes shared by Skills, Courses, and (when an item opts in
+// with `expandable: true`) the description column of a list entry.
 // ----------------------------------------------------------------------
 .skill-category,
-.course-item {
+.course-item,
+.list-expand {
   break-inside: avoid;
   margin-bottom: 1.2rem;
   border: 1px solid #ddd;
@@ -268,12 +283,14 @@ p.quote {
 }
 
 .dark .skill-category,
-.dark .course-item {
+.dark .course-item,
+.dark .list-expand {
   border-color: #444;
 }
 
 .skill-category summary,
-.course-item summary {
+.course-item summary,
+.list-expand summary {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.8rem;
@@ -281,12 +298,14 @@ p.quote {
 }
 
 .skill-category summary::-webkit-details-marker,
-.course-item summary::-webkit-details-marker {
+.course-item summary::-webkit-details-marker,
+.list-expand summary::-webkit-details-marker {
   display: none;
 }
 
 .skill-category summary::before,
-.course-item summary::before {
+.course-item summary::before,
+.list-expand summary::before {
   content: "▸";
   display: inline-block;
   margin-right: 0.6rem;
@@ -294,8 +313,13 @@ p.quote {
 }
 
 .skill-category[open] summary::before,
-.course-item[open] summary::before {
+.course-item[open] summary::before,
+.list-expand[open] summary::before {
   transform: rotate(90deg);
+}
+
+.list-expand-body {
+  margin-top: 0.8rem;
 }
 
 .skill-details,
@@ -388,7 +412,8 @@ p.quote {
 
 // Subtle card fill so expandable boxes read clearly over the stars
 .dark .skill-category,
-.dark .course-item {
+.dark .course-item,
+.dark .list-expand {
   background: rgba(255, 255, 255, 0.035);
 }
 

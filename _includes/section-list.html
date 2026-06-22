@@ -1,8 +1,22 @@
 {% for item in include.content %}
   <div class="row clearfix layout layout-{{item.layout | default: 'left'}} border-{{item.border | default: 'no'}}">
     <div class="col-xs-12 col-sm-6 col-print-12 details">
-      <h4 id="{{ item.title | slugify }}">{{ item.title }}</h4>
-      {%- if item.sub_title -%}<p><b>{{ item.sub_title }}</b></p>{%- endif -%}
+      <h4 id="{{ item.title | slugify }}">
+        {%- if item.title_link -%}
+          {% include a.html href=item.title_link class="" %}{{ item.title }}</a>
+        {%- else -%}
+          {{ item.title }}
+        {%- endif -%}
+      </h4>
+      {%- if item.sub_title -%}
+        <p><b>
+          {%- if item.sub_title_link -%}
+            {% include a.html href=item.sub_title_link class="" %}{{ item.sub_title }}</a>
+          {%- else -%}
+            {{ item.sub_title }}
+          {%- endif -%}
+        </b></p>
+      {%- endif -%}
       {%- if item.caption -%}<p>{{ item.caption }}</p>{%- endif -%}
 
       {%- if item.link -%}
@@ -23,7 +37,16 @@
       {%- if item.quote -%}
         <p class="quote">{{ item.quote }}</p>
       {%- endif -%}
-      {{ item.description | strip | markdownify }}
+      {%- if item.expandable -%}
+      <details class="list-expand">
+        <summary>{{ item.expand_label | default: "Show details" }}</summary>
+        <div class="list-expand-body">
+          {{ item.description | strip | markdownify }}
+        </div>
+      </details>
+      {%- else -%}
+        {{ item.description | strip | markdownify }}
+      {%- endif -%}
     </div>
   </div>
   {%- if item.image -%}
