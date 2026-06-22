@@ -4,6 +4,35 @@
 
 @import 'modern-resume-theme';
 
+// ----------------------------------------------------------------------
+// Font: three Google Fonts are loaded below so you can try them live.
+// To switch, just change the name in $font-family to one of:
+//   'Roboto'          -- current default, neutral sans-serif
+//   'Inter'           -- clean and very legible, popular for tech portfolios
+//   'Space Grotesk'   -- geometric/technical, fits a space & robotics theme
+//   'IBM Plex Sans'   -- engineering feel, pairs well with the monospace course-code badges
+// ----------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+$font-family: 'Roboto', sans-serif;
+
+body,
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+}
+
+// ----------------------------------------------------------------------
+// Header: your name (h1) and title (h2). Change these two font-sizes
+// to make them bigger/smaller.
+// ----------------------------------------------------------------------
+.header-left h1 {
+  font-size: 4rem; // your name
+}
+
+.header-left h2 {
+  font-size: 2rem; // your title
+}
+
 // Sticky quick-access navigation
 .quicknav {
   position: sticky;
@@ -18,18 +47,19 @@
   margin-top: 0;
 }
 
+// Navigation bar size: tune padding (bar height) and font-size (link text) here.
 .quicknav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1rem; // <- vertical/horizontal padding controls the bar's height
   gap: 0.4rem 1.6rem;
 }
 
 .quicknav a {
-  font-size: 1.4rem;
+  font-size: 1.4rem; // <- nav link text size
   font-weight: 500;
   text-decoration: none;
   color: #333;
@@ -75,6 +105,20 @@ h4 {
   .quicknav {
     display: none;
   }
+}
+
+// ----------------------------------------------------------------------
+// Profile picture: show it at its own natural size/aspect ratio (scaled
+// down to fit the column) instead of the theme's default cropped circle.
+// ----------------------------------------------------------------------
+.profile-img {
+  width: auto;
+  height: auto;
+  max-width: 100%; // <- caps how large the picture can render; lower this to shrink it
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 // ----------------------------------------------------------------------
@@ -189,27 +233,26 @@ p.quote {
   white-space: nowrap;
 }
 
+// Institution logos: side by side, centered, no background card.
 .edu-logos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem; // <- space between logos
   margin-top: 3rem;
 }
 
-.edu-logo-card {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 8px;
-  padding: 0.8rem 1.6rem;
-}
-
-.edu-logo-card img {
-  height: 36px;
+.edu-logo {
+  height: 40px; // <- logo size (width follows automatically)
   width: auto;
   display: block;
+}
+
+// Recolors a dark logo (eg. TU Delft's black/blue wordmark) to plain white
+// so it stays legible against the dark background without a white card.
+.edu-logo-invert {
+  filter: brightness(0) invert(1);
 }
 
 // ----------------------------------------------------------------------

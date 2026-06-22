@@ -19,7 +19,7 @@
 {%- if edu_logos.size > 0 -%}
 <div class="edu-logos">
   {% for item in edu_logos %}
-  <span class="edu-logo-card"><img src="{{ item.logo | relative_url }}" alt="{{ item.logo_alt | default: item.title }}"></span>
+  <img class="edu-logo{% if item.logo_invert %} edu-logo-invert{% endif %}" src="{{ item.logo | relative_url }}" alt="{{ item.logo_alt | default: item.title }}">
   {% endfor %}
 </div>
 {%- endif -%}

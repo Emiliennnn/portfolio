@@ -50,7 +50,7 @@ additional_links:
 
 # About Section
 about_title: About Me
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
+about_profile_image: images/profile_picture.jpg
 about_content: | # this will include new lines to allow paragraphs
   I am a Master's student in Robotics at EPFL (École Polytechnique Fédérale de Lausanne). I have been focusing on Control Theory, including robust, adaptive and optimal controllers and state estimators, system identification, as well as networked and distributed systems.
 
@@ -75,6 +75,7 @@ content:
         caption: 2023 – 2024
         logo: images/tu_deflt_logo.png
         logo_alt: TU Delft logo
+        logo_invert: true
         items:
           - text: Academic exchange year, Electrical Engineering
 
@@ -228,15 +229,15 @@ content:
           - Odor Source Localization
           - Group Project: Laplacian Control, Reynold's Flocking, Distributed Communication
       - title: Machine Learning
-        code: CS-433
-        link: https://edu.epfl.ch/coursebook/en/machine-learning-CS-433
+        code: MICRO-455
+        link: https://edu.epfl.ch/coursebook/en/machine-learning-i-MICRO-455
         details: | # this will include new lines to allow paragraphs
           - Supervised Learning (GMR, GMM, SVR, SVM, kNN, Regression Trees)
           - Unsupervised Learning (PCA, ICA, DBSCAN, k-means, Hierarchical Clustering)
           - ANN / DNN
       - title: Reinforcement Learning
-        code: CS-456
-        link: https://edu.epfl.ch/coursebook/en/deep-reinforcement-learning-CS-456
+        code: EE-568
+        link: https://edu.epfl.ch/coursebook/en/reinforcement-learning-EE-568
         details: | # this will include new lines to allow paragraphs
           - Markov Chains
           - Value Iteration, Policy Iteration
