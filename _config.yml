@@ -56,6 +56,10 @@ about_content: | # this will include new lines to allow paragraphs
 
   I have a deep interest in space and energy applications, and more generally in mobile robotics. I aim to contribute to the development of innovative technologies that unite scientific research, sustainability and efficient use of resources. My goal is to support long-term engineering that benefits both the environment and society.
 
+  **Languages**
+    - French - Mother tongue
+    - English - Fluent (C1+)
+
 content:
   - title: Education
     layout: education
@@ -79,7 +83,7 @@ content:
         items:
           - text: Academic exchange year, Electrical Engineering
 
-  - title: Projects
+  - title: Academic Projects
     layout: list
     content:
       - layout: left
@@ -139,6 +143,61 @@ content:
           - Complex python simulation using OOP
           - Mathematical proof construction (theory abstraction)
           - Research methods (literature review, limitation and critical assessment)
+
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        border: weak
+        title: Research Intern - Engine Model Calibration with Reinforcement Learning and Mixture of Experts 
+        sub_title: Safran Tech
+        sub_title_link: https://www.safran-group.com/fr/groupe/innovation/safran-tech
+        caption: 09/2026 - 02/2027 (CURRENT)
+        expandable: true
+        description: | # this will include new lines to allow paragraphs
+        
+        image: images/safran_logo.png
+          
+      
+      - layout: left
+        border: weak
+        title: Lead ADCS Engineer
+        sub_title: EPFL Spacecraft Team (EST)
+        sub_title_link: https://www.epflspacecraftteam.ch
+        caption: 02/2025 - 08/2026
+        expandable: true
+        description: | # this will include new lines to allow paragraphs
+          
+          I have been part of a 70-member student team which aims to characterize Earth exosphere's chemical composition using a state-of-the-art mass spectrometer developed at University of Bern, in a 3U CubeSat expected to be launched mid 2027. EST had the amazing opportunity of being affiliated with the Fly Your Satellite Design Booster ESA program, which allowed me to discuss our architecture with several AOCS ESA experts. My close work with other members reinforced my ability to foster cooperation and to manage relationship in high-stress situations. Amongst others, I was in charge of:         
+
+          - State-Estimation and Control Schemes
+          - Fault-Detection, Isolation and Recovery (FDIR) strategies
+          - ADCS Architecture and Digital Twin Simulation
+          - Hardware Integration and Testing
+        
+        image: images/est_logo.png
+        # image_alt: EPFL Spacecraft Team with the CHESS CubeSat mockup
+
+  - title: Publication
+    layout: list
+    content:
+      - layout: top
+        title: Failure-Tolerant and Power-Optimal ADCS Design for 3U CubeSats
+        sub_title: 5th Symposium on Space Educational Activities (SSEA)
+        caption: 04/2026
+        expandable: true
+        expand_label: Read Paper
+        # To embed the PDF instead of the abstract: drop the file at eg.
+        # assets/papers/ssea-2026-adcs.pdf, then uncomment the line below
+        # with that path and change expand_label above to "Read paper".
+        pdf: assets/papers/ssea-2026-adcs.pdf
+        quote: >
+          Presented and published at the 5th SSEA, hosted by the Technical University of Munich and organised with ESA.
+        description: | # this will include new lines to allow paragraphs
+          Nanosatellites have emerged over the past decade as a cost-effective solution for low Earth orbit missions that do not require large payload volumes. Among them, CubeSats have gained relevance, especially in academic and student-led projects. Their design, however, remains highly challenging due to stringent constraints on volume, power consumption, and attitude accuracy imposed by mission requirements and payload specifications. Typical CubeSat missions involve operation modes, including Nadir-pointing, Sun-pointing and Point-Tracking, answering needs for data transmission, solar charging and ground station tracking. These modes demand an actuator configuration capable of versatile control (typically combining magnetic torquers and reaction wheels) and a robust sensor layout for attitude determination. Consequently, the design of the Attitude Determination and Control System is critical, requiring not only precise control and estimation capabilities but also resilience to actuator or sensor failures, all under tight power and computational constraints. In this work, a failure-tolerant ADCS architecture for 3U CubeSats is proposed, integrating redundant actuators and sensors, followed by a comparative study on power-efficient control. This study aims to explore ways to balance reliability with energy efficiency, mitigating the additional power demand introduced by redundancy through optimized control allocation. Computational efficiency is also a key objective, ensuring onboard feasibility. Several control approaches are investigated through a developed realistic MATLAB simulation, including classical Proportional-Integral-Derivative control, Linear Quadratic Regulation in both finite and infinite horizon formulations, and Model Predictive Control. On the estimation side, sensor fusion techniques for accurate attitude reconstruction under disturbances are employed, exploring the performance of a Multiplicative Extended Kalman Filter subject to model mismatch. This study contributes a systematic comparison of control strategies tailored for power- and computation-limited CubeSat platforms, emphasizing practical implementability of fault-tolerant ADCS architectures in future 3U missions.
+
+        # image: images/ssea-presentation.jpg  -- TODO: uncomment and add your photo here (renders full-width below this entry)
+        # image_alt: Presenting at the 5th SSEA in Munich
 
   - title: Skills
     layout: skills
@@ -295,70 +354,14 @@ content:
           - Causal Inference
           - Group Project: [Epidemiology of Toxicity in the Reddit Hyperlink Network](https://ctordo.github.io/reddit-hyperlink-network-project-draft/)
 
-  - title: Experience
-    layout: list
-    content:
-      - layout: left
-        border: weak
-        title: Research Intern at Safran Tech
-        sub_title: Engine Model Calibration with Reinforcement Learning and Mixture of Experts
-        sub_title_link: https://www.safran-group.com/fr/groupe/innovation/safran-tech
-        caption: 09/2026 - 02/2027
-        expandable: true
-        description: | # this will include new lines to allow paragraphs
-        
-        image: images/safran_logo.png
-          
-      
-      - layout: left
-        border: weak
-        title: Lead ADCS Engineer
-        sub_title: EPFL Spacecraft Team (EST)
-        sub_title_link: https://www.epflspacecraftteam.ch
-        caption: 02/2025 - 08/2026
-        expandable: true
-        description: | # this will include new lines to allow paragraphs
-          
-          I have been part of a 70-member student team which aims to characterize Earth exosphere's chemical composition using a state-of-the-art mass spectrometer developed at University of Bern, in a 3U CubeSat expected to be launched mid 2027. EST had the amazing opportunity of being affiliated with the Fly Your Satellite Design Booster ESA program, which allowed me to discuss our architecture with several AOCS ESA experts. My close work with other members reinforced my ability to foster cooperation and to manage relationship in high-stress situations. Amongst others, I was in charge of:         
+  # - title: Languages & Interests
+  #   layout: text
+  #   content: | # this will include new lines to allow paragraphs
+  #     **Languages**
+  #     French — Mother tongue · English — Fluent (C1+), academic exchange year at TU Delft · Spanish — Intermediate (A2/B1)
 
-          - State-Estimation and Control Schemes
-          - Fault-Detection, Isolation and Recovery (FDIR) strategies
-          - ADCS Architecture and Digital Twin Simulation
-          - Hardware Integration and Testing
-        
-        image: images/est_logo.png
-        # image_alt: EPFL Spacecraft Team with the CHESS CubeSat mockup
-
-
-  - title: Publication
-    layout: list
-    content:
-      - layout: top
-        title: Failure-Tolerant and Power-Optimal ADCS Design for 3U CubeSats
-        sub_title: 5th Symposium on Space Educational Activities (SSEA)
-        caption: 04/2026
-        expandable: true
-        expand_label: Read Paper
-        # To embed the PDF instead of the abstract: drop the file at eg.
-        # assets/papers/ssea-2026-adcs.pdf, then uncomment the line below
-        # with that path and change expand_label above to "Read paper".
-        pdf: assets/papers/ssea-2026-adcs.pdf
-        quote: >
-          Presented and published at the 5th SSEA, hosted by the Technical University of Munich and organised with ESA.
-        description: | # this will include new lines to allow paragraphs
-          Nanosatellites have emerged over the past decade as a cost-effective solution for low Earth orbit missions that do not require large payload volumes. Among them, CubeSats have gained relevance, especially in academic and student-led projects. Their design, however, remains highly challenging due to stringent constraints on volume, power consumption, and attitude accuracy imposed by mission requirements and payload specifications. Typical CubeSat missions involve operation modes, including Nadir-pointing, Sun-pointing and Point-Tracking, answering needs for data transmission, solar charging and ground station tracking. These modes demand an actuator configuration capable of versatile control (typically combining magnetic torquers and reaction wheels) and a robust sensor layout for attitude determination. Consequently, the design of the Attitude Determination and Control System is critical, requiring not only precise control and estimation capabilities but also resilience to actuator or sensor failures, all under tight power and computational constraints. In this work, a failure-tolerant ADCS architecture for 3U CubeSats is proposed, integrating redundant actuators and sensors, followed by a comparative study on power-efficient control. This study aims to explore ways to balance reliability with energy efficiency, mitigating the additional power demand introduced by redundancy through optimized control allocation. Computational efficiency is also a key objective, ensuring onboard feasibility. Several control approaches are investigated through a developed realistic MATLAB simulation, including classical Proportional-Integral-Derivative control, Linear Quadratic Regulation in both finite and infinite horizon formulations, and Model Predictive Control. On the estimation side, sensor fusion techniques for accurate attitude reconstruction under disturbances are employed, exploring the performance of a Multiplicative Extended Kalman Filter subject to model mismatch. This study contributes a systematic comparison of control strategies tailored for power- and computation-limited CubeSat platforms, emphasizing practical implementability of fault-tolerant ADCS architectures in future 3U missions.
-
-        # image: images/ssea-presentation.jpg  -- TODO: uncomment and add your photo here (renders full-width below this entry)
-        # image_alt: Presenting at the 5th SSEA in Munich
-
-  - title: Languages & Interests
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      **Languages**
-      French — Mother tongue · English — Fluent (C1+), academic exchange year at TU Delft · Spanish — Intermediate (A2/B1)
-
-      **Interests**
-      Arts — Music (guitar), painting, drawing · Sports — Triathlon, calisthenics · Space — Celestial body exploration and discovery
+  #     **Interests**
+  #     Arts — Music (guitar), painting, drawing · Sports — Triathlon, calisthenics · Space — Celestial body exploration and discovery
 
 # Footer
 footer_show_references: false
