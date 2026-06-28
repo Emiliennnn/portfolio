@@ -41,7 +41,12 @@
       <details class="list-expand">
         <summary>{{ item.expand_label | default: "Show details" }}</summary>
         <div class="list-expand-body">
-          {{ item.description | strip | markdownify }}
+          {%- if item.pdf -%}
+            <iframe class="pdf-embed" src="{{ item.pdf | relative_url }}" title="{{ item.title }}"></iframe>
+            <p class="pdf-fallback"><a href="{{ item.pdf | relative_url }}" target="_blank">Open PDF in a new tab</a></p>
+          {%- else -%}
+            {{ item.description | strip | markdownify }}
+          {%- endif -%}
         </div>
       </details>
       {%- else -%}
