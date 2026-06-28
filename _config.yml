@@ -149,12 +149,14 @@ content:
     content:
       - layout: left
         border: weak
-        title: Research Intern - Engine Model Calibration with Reinforcement Learning and Mixture of Experts 
+        title: R&D Intern - Engine Model Calibration with Reinforcement Learning and Mixture of Experts 
         sub_title: Safran Tech
         sub_title_link: https://www.safran-group.com/fr/groupe/innovation/safran-tech
         caption: 09/2026 - 02/2027 (CURRENT)
         expandable: true
         description: | # this will include new lines to allow paragraphs
+
+          I will be starting my 6-months industry internship in the research division of Safran, working on modelling engines using Reinforcement Learning and more specifically Mixture of Experts. 
         
         image: images/safran_logo.png
           
@@ -184,6 +186,7 @@ content:
       - layout: top
         title: Failure-Tolerant and Power-Optimal ADCS Design for 3U CubeSats
         sub_title: 5th Symposium on Space Educational Activities (SSEA)
+        sub_title_link: https://ssea.space/
         caption: 04/2026
         expandable: true
         expand_label: Read Paper
@@ -196,8 +199,10 @@ content:
         description: | # this will include new lines to allow paragraphs
           Nanosatellites have emerged over the past decade as a cost-effective solution for low Earth orbit missions that do not require large payload volumes. Among them, CubeSats have gained relevance, especially in academic and student-led projects. Their design, however, remains highly challenging due to stringent constraints on volume, power consumption, and attitude accuracy imposed by mission requirements and payload specifications. Typical CubeSat missions involve operation modes, including Nadir-pointing, Sun-pointing and Point-Tracking, answering needs for data transmission, solar charging and ground station tracking. These modes demand an actuator configuration capable of versatile control (typically combining magnetic torquers and reaction wheels) and a robust sensor layout for attitude determination. Consequently, the design of the Attitude Determination and Control System is critical, requiring not only precise control and estimation capabilities but also resilience to actuator or sensor failures, all under tight power and computational constraints. In this work, a failure-tolerant ADCS architecture for 3U CubeSats is proposed, integrating redundant actuators and sensors, followed by a comparative study on power-efficient control. This study aims to explore ways to balance reliability with energy efficiency, mitigating the additional power demand introduced by redundancy through optimized control allocation. Computational efficiency is also a key objective, ensuring onboard feasibility. Several control approaches are investigated through a developed realistic MATLAB simulation, including classical Proportional-Integral-Derivative control, Linear Quadratic Regulation in both finite and infinite horizon formulations, and Model Predictive Control. On the estimation side, sensor fusion techniques for accurate attitude reconstruction under disturbances are employed, exploring the performance of a Multiplicative Extended Kalman Filter subject to model mismatch. This study contributes a systematic comparison of control strategies tailored for power- and computation-limited CubeSat platforms, emphasizing practical implementability of fault-tolerant ADCS architectures in future 3U missions.
 
-        # image: images/ssea-presentation.jpg  -- TODO: uncomment and add your photo here (renders full-width below this entry)
-        # image_alt: Presenting at the 5th SSEA in Munich
+        image: images/esa_logo.png
+        image_2: images/ssea_logo.png
+        image_2_alt: 5th SSEA logo
+
 
   - title: Skills
     layout: skills
