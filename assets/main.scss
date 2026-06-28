@@ -127,7 +127,7 @@ h4 {
 .profile-img {
   width: auto;
   height: auto;
-  max-width: 100%; // <- caps how large the picture can render; lower this to shrink it
+  max-width: 110%; // <- caps how large the picture can render; lower this to shrink it
   border-radius: 0;
   box-shadow: none;
   display: block;
@@ -135,13 +135,16 @@ h4 {
 }
 
 // ----------------------------------------------------------------------
-// Section spacing: each section gets enough height that jumping to it
-// from the nav bar doesn't reveal the previous/next section too.
+// Section spacing: min-height keeps short sections at least one screen
+// tall (so jumping to one from the nav bar doesn't reveal the next one
+// too), but the gap that actually matters for "constant spacing" is this
+// fixed padding-bottom -- raise/lower it to change the gap before every
+// section's heading, regardless of how tall that section's content is.
 // ----------------------------------------------------------------------
 .content-section {
   min-height: calc(100vh - 80px);
   padding-top: 1rem;
-  padding-bottom: 4rem;
+  padding-bottom: 10rem; // <- constant gap before the next section's heading
   box-sizing: border-box;
 }
 
@@ -422,10 +425,11 @@ p.quote {
 }
 
 // ----------------------------------------------------------------------
-// Large images, eg. after an Experience or Publication entry
+// Large images, eg. after an Experience or Publication entry. Sits inside
+// the entry's bordered box, above its closing divider line.
 // ----------------------------------------------------------------------
 .item-image {
-  margin: 1.5rem 0 2.5rem;
+  margin: 1.5rem 0 1rem;
 }
 
 .item-image img {
@@ -434,6 +438,14 @@ p.quote {
   object-fit: cover;
   border-radius: 8px;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Experience images (Safran, EST, ...): centered, narrower than full width.
+// Tune the percentage to resize them.
+#experience ~ .list-entry .item-image img {
+  width: 60%;
 }
 
 // ----------------------------------------------------------------------

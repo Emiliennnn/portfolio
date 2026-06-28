@@ -300,21 +300,35 @@ content:
     content:
       - layout: left
         border: weak
+        title: Research Intern at Safran Tech
+        sub_title: Engine Model Calibration with Reinforcement Learning and Mixture of Experts
+        sub_title_link: https://www.safran-group.com/fr/groupe/innovation/safran-tech
+        caption: 09/2026 - 02/2027
+        expandable: true
+        description: | # this will include new lines to allow paragraphs
+        
+        image: images/safran_logo.png
+          
+      
+      - layout: left
+        border: weak
         title: Lead ADCS Engineer
-        sub_title: EPFL Spacecraft Team
+        sub_title: EPFL Spacecraft Team (EST)
         sub_title_link: https://www.epflspacecraftteam.ch
-        caption: 02/2025 - Present
+        caption: 02/2025 - 08/2026
         expandable: true
         description: | # this will include new lines to allow paragraphs
           
-          I am part of a 70-member student team which aims to characterize Earth exosphere's chemical composition using a state-of-the-art mass spectrometer developed at University of Bern, in a 3U CubeSat expected to be launched mid 2027. We have the amazing opportunity to be affiliated with the Fly Your Satellite Design Booster ESA program, which allowed me to discuss our architecture with several AOCS ESA experts. My close work with other members reinforced my ability to foster cooperation and to manage relationship in high-stress situations. Amongst others, I am in charge of:         
+          I have been part of a 70-member student team which aims to characterize Earth exosphere's chemical composition using a state-of-the-art mass spectrometer developed at University of Bern, in a 3U CubeSat expected to be launched mid 2027. EST had the amazing opportunity of being affiliated with the Fly Your Satellite Design Booster ESA program, which allowed me to discuss our architecture with several AOCS ESA experts. My close work with other members reinforced my ability to foster cooperation and to manage relationship in high-stress situations. Amongst others, I was in charge of:         
 
           - State-Estimation and Control Schemes
           - Fault-Detection, Isolation and Recovery (FDIR) strategies
           - ADCS Architecture and Digital Twin Simulation
           - Hardware Integration and Testing
-        # image: images/spacecraft-team.jpg  -- TODO: uncomment and add your photo here (renders full-width below this entry)
+        
+        image: images/est_logo.png
         # image_alt: EPFL Spacecraft Team with the CHESS CubeSat mockup
+
 
   - title: Publication
     layout: list
@@ -324,11 +338,11 @@ content:
         sub_title: 5th Symposium on Space Educational Activities (SSEA)
         caption: 04/2026
         expandable: true
-        expand_label: Show abstract
+        expand_label: Read Paper
         # To embed the PDF instead of the abstract: drop the file at eg.
         # assets/papers/ssea-2026-adcs.pdf, then uncomment the line below
         # with that path and change expand_label above to "Read paper".
-        # pdf: assets/papers/ssea-2026-adcs.pdf
+        pdf: assets/papers/ssea-2026-adcs.pdf
         quote: >
           Presented and published at the 5th SSEA, hosted by the Technical University of Munich and organised with ESA.
         description: | # this will include new lines to allow paragraphs
