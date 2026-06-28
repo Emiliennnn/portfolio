@@ -144,7 +144,7 @@ h4 {
 .content-section {
   min-height: calc(100vh - 80px);
   padding-top: 1rem;
-  padding-bottom: 10rem; // <- constant gap before the next section's heading
+  padding-bottom: 30rem; // <- constant gap before the next section's heading
   box-sizing: border-box;
 }
 
@@ -443,9 +443,18 @@ p.quote {
 }
 
 // Experience images (Safran, EST, ...): centered, narrower than full width.
-// Tune the percentage to resize them.
+// Default width for any experience image without its own rule below.
 #experience ~ .list-entry .item-image img {
-  width: 60%;
+  width: 30%;
+}
+
+// Tune each logo's width independently here.
+#experience ~ .list-entry .item-image img[src*="safran_logo"] {
+  width: 35%;
+}
+
+#experience ~ .list-entry .item-image img[src*="est_logo"] {
+  width: 15%;
 }
 
 // ----------------------------------------------------------------------
